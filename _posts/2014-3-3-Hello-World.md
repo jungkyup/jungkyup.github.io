@@ -4,7 +4,6 @@ title: "You're up and running!"
 published: true
 tags: 
   - research
-  - project
 ---
 
 
