@@ -3,6 +3,7 @@ layout: default
 published: true
 ---
 
+
 <header id="post-header">
     <h1 id="post-title">{{ page.tag }}</h1>
     <h4 id="post-subtitle">Articles by tag</h4>
@@ -24,9 +25,16 @@ published: true
                 {% endif %}
             {% endif %}
 			
-            <a href="{{ post.url }}/" class="list-group-item">
-                <h4 class="list-group-item-heading">{{ post.title }}</h4>
-            </a>
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
 
             {% if forloop.last %}
                 </div>
