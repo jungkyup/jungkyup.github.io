@@ -1,0 +1,20 @@
+---
+layout: default
+published: true
+---
+
+
+
+<h1>Tags</h1>
+
+<div>
+    {% if site.data.tags.size > 0 %}
+        {% for tag in site.data.tags %}
+  			
+  <a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a> {{ site.tags[tag.slug].size }} <br>
+  			
+        {% endfor %}
+    {% else %}
+        <p>There are no tags.</p>
+    {% endif %}
+</div>
